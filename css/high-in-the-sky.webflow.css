@@ -25,7 +25,7 @@
 	width: 95%;
 }
 
-button {
+button, .menubutton {
 	width: 45%;
 	margin-right: 2%;
 	margin-left: 2%;
@@ -47,7 +47,6 @@ button {
 	z-index: 1001;
 
 }
-
 
 .dropdown-menu li {
 	padding-bottom: 7px;
@@ -77,24 +76,28 @@ button {
 .open > .dropdown-menu {
 	visibility: visible;
 }
-.menuitem {
+
+.menuitem.menubutton {
 	background-color: #abdb6c;
 	height: 0;
 	padding: 0;
+	display:table-cell; 
+	vertical-align: middle;
+
 	/*visibility: hidden;*/
 }
 .open .menuitem {
 	height: 50px;
-	padding: 4px 15px;
   /*display: block;*/
   /*visibility: visible;*/
     transition-property: height, padding;
     transition-duration: 0.4s, 0s;
     transition-timing-function: linear;
     transition-delay: 0s, 0.3s;
+
 }
 
-button.close-button {
+button.close-button, .menubutton.close-button {
 	float: right;
 	background-color: #303934;
 
@@ -212,7 +215,7 @@ p {
 	font-size: inherit;
 }
 
-button {
+button, .menubutton {
 	display: inline-block;
 	height: 50px;
 	padding: 4px 15px;
@@ -233,7 +236,7 @@ button {
 	text-shadow: none;
 }
 
-button:hover {
+button:hover, .menubutton:hover {
 	background-color: #477006;
 }
 a.button, .form-button {
